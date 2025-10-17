@@ -1,0 +1,519 @@
+@font-face {
+	font-family: apple;
+	src: url(./sf-pro-text_regular.woff2);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: apple;
+	color: white;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+/*
+#box1 {
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(to right bottom, red, blue);
+	background: radial-gradient(yellow, red, black);
+	background: conic-gradient(red, blue);
+} */
+
+/* #outer {
+	height: 200px;
+	width: 400px;
+	background-color: lightseagreen;
+}
+
+#inner {
+	height: 40%;
+	width: 40%;
+	background-color: lightblue;
+} */
+
+/* #main {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1726629597667-45538148be5f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fDNEJTIwaW1hZ2VzfGVufDB8fDB8fHww);
+  background-size: cover;
+  background-position: center;
+} */
+
+/* #car1 {
+	width: 200px;
+	height: 300px;
+	background-color: red;
+}
+
+#car2 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 250px;
+	height: 340px;
+	background-color: green;
+}
+
+#car3 {
+	width: 300px;
+	height: 400px;
+	background-color: blue;
+} */
+
+/* #box {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background-color: red;
+}
+
+#innerbox {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+}
+
+#microinnerbox {
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+}
+
+#actualbox {
+	position: absolute;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: green;
+} */
+
+/* #homepage {
+	width: 100%;
+	height: 3000px;
+}
+
+#side {
+	position: fixed;
+	right: 10%;
+	top: 30%;
+	width: 100px;
+	height: 400px;
+	background-color: red;
+} */
+
+/* #parent {
+	width: 100%;
+	background-color: #222;
+}
+
+#child {
+	width: 100%;
+	height: 2000px;
+	background-color: #333;
+}
+
+#child2 {
+	width: 100%;
+	height: 2000px;
+	background-color: #555;
+}
+
+#sticky {
+	position: sticky;
+	top: 0;
+	width: 300px;
+	height: 200px;
+	background-color: red;
+} */
+
+/* #parent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+#box1 {
+	width: 200px;
+	height: 200px;
+	background-color: crimson;
+}
+
+#box2 {
+	width: 200px;
+	height: 200px;
+	background-color: green;
+}
+
+#box3 {
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+} */
+
+/* #main {
+	width: 100%;
+	height: 100%;
+}
+
+#nav {
+	width: 100%;
+	height: 80px;
+	background-color: rgb(24, 24, 24);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+#nav h4 {
+	color: #fff;
+	font-weight: 300;
+}
+
+#center {
+	width: 100%;
+	height: 80%;
+	background-image: url(./hero_iphone_17_pro__bknyzxfk2agi_large_2x.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding: 50px;
+}
+
+#center h1 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 600;
+}
+
+#center h5 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+#links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	padding: 20px;
+}
+
+#links button {
+	background-color: royalblue;
+	color: #fff;
+	padding: 15px 24px;
+	border-radius: 50px;
+	border: none;
+	font-weight: 300;
+	font-size: 20px;
+} */
+
+/* #main {
+	height: 100%;
+	width: 100%;
+	padding: 30px;
+	background-color: teal;
+}
+
+.card {
+	height: 300px;
+	width: 350px;
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+	transition: all ease 1s;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: bottom;
+}
+
+.bottom {
+	height: 40%;
+	width: 100%;
+	background: linear-gradient(transparent, black);
+	position: absolute;
+	bottom: -40%;
+	transition: all ease 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.bottom h4 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.bottom h3 {
+	background-color: white;
+	padding: 5px 7px;
+	border-radius: 50%;
+}
+
+.card:hover .bottom {
+	bottom: 0;
+} */
+
+/* .parent {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+.box {
+	background-color: crimson;
+	height: 200px;
+	width: 200px;
+}
+
+.box:nth-child(2) {
+	background-color: aquamarine;
+}
+
+.box:nth-child(3) {
+	background-color: blue;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 10px;
+
+}
+
+.child {
+	background-color: crimson;
+	border: 3px solid white;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 60px 1fr 80px;
+	grid-template-areas:
+		'header header'
+		'aside section'
+		'footer footer';
+}
+
+header {
+	background-color: gold;
+	grid-area: header;
+}
+
+aside {
+	background-color: aqua;
+	grid-area: aside;
+}
+
+section {
+	background-color: magenta;
+	grid-area: section;
+}
+
+footer {
+	background-color: maroon;
+	grid-area: footer;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 70px 1fr 1fr;
+	gap: 20px;
+	padding: 20px;
+	grid-template-areas:
+		'header header header'
+		'section section section'
+		'div1 div2 div3';
+}
+
+header {
+	background-color: crimson;
+	grid-area: header;
+}
+
+section {
+	background-color: lightseagreen;
+	grid-area: section;
+}
+
+#div1 {
+	background-color: darkmagenta;
+	grid-area: div1;
+}
+
+#div2 {
+	background-color: darkred;
+	grid-area: div2;
+}
+
+#div3 {
+	background-color: darkorchid;
+	grid-area: div3;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 70px 200px 1fr;
+	grid-template-areas:
+		'header header'
+		'aside section'
+		'figure figure';
+	gap: 20px;
+	padding: 20px;
+}
+
+header {
+	background-color: crimson;
+	grid-area: header;
+}
+
+aside {
+	background-color: lightsalmon;
+	grid-area: aside;
+}
+
+section {
+	background-color: lightseagreen;
+	grid-area: section;
+}
+
+figure {
+	background-color: dodgerblue;
+	grid-area: figure;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 80px 1fr 0.5fr 0.5fr;
+	gap: 10px;
+	padding: 10px;
+	grid-template-areas:
+		'header header header'
+		'section section section'
+		'div-left bottom-up div-right'
+		'div-left bottom-down div-right';
+}
+
+header {
+	background-color: crimson;
+	grid-area: header;
+}
+
+section {
+	background-color: aqua;
+	grid-area: section;
+}
+
+#div-left {
+	background-color: darkmagenta;
+	grid-area: div-left;
+}
+
+#div-right {
+	background-color: darkgoldenrod;
+	grid-area: div-right;
+}
+
+#bottom-up {
+	background-color: darkred;
+	grid-area: bottom-up;
+}
+
+#bottom-down {
+	background-color: darkcyan;
+	grid-area: bottom-down;
+} */
+
+/* main {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 300px 1fr;
+	gap: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	grid-template-areas:
+		'left-top top-center right-top'
+		'left-top center right-bottom'
+		'left-bottom left-bottom right-bottom';
+}
+
+#left-top {
+	background-color: crimson;
+	grid-area: left-top;
+	border-radius: 10px;
+}
+
+#left-bottom {
+	background-color: darkblue;
+	grid-area: left-bottom;
+	border-radius: 10px;
+}
+
+#top-center {
+	background-color: darkgoldenrod;
+	grid-area: top-center;
+	border-radius: 10px;
+}
+
+#center {
+	background-color: darkmagenta;
+	grid-area: center;
+	border-radius: 10px;
+}
+
+#right-top {
+	background-color: darkred;
+	grid-area: right-top;
+	border-radius: 10px;
+}
+
+#right-bottom {
+	background-color: darkturquoise;
+	grid-area: right-bottom;
+	border-radius: 10px;
+} */

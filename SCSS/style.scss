@@ -1,0 +1,47 @@
+@import 'button';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.blue {
+	@include blue-style(blue, white, 18px);
+}
+
+.red {
+	@include blue-style(red, yellow, 20px);
+}
+
+// @mixin flexCenter() {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+
+// main {
+// 	height: 100%;
+// 	width: 100%;
+// 	background-color: black;
+// 	@include flexCenter();
+
+// 	section {
+// 		height: 50%;
+// 		width: 50%;
+// 		background-color: #f2dbdb;
+// 		@include flexCenter();
+
+// 		h1 {
+// 			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+// 				Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+// 				sans-serif;
+// 		}
+// 	}
+// }

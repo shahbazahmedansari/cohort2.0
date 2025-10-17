@@ -1,0 +1,10 @@
+@mixin blue-style($bg-color: blue, $text-color: white, $text-size: 18px) {
+	padding: 20px 30px;
+	background-color: $bg-color;
+	cursor: pointer;
+	font-size: $text-size;
+	border: none;
+	border-radius: 7px;
+	outline: none;
+	color: $text-color;
+}
