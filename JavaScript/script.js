@@ -21,3 +21,17 @@ let b = 14;
 // truthy and falsy values
 // 0 null "" false undefined NaN document.all -> false
 // rest all -> true
+
+// Rock paper scissor logic
+
+function rps(user, computer) {
+  if (user === computer) return "draw";
+
+  if (user === "rock" && computer === "scissor") return "user";
+  if (user === "paper" && computer === "rock") return "user";
+  if (user === "scissor" && computer === "paper") return "user";
+
+  return "computer";
+}
+
+console.log(rps("rock", "rock"));
