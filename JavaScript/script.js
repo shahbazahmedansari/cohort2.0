@@ -15,8 +15,8 @@
 // what are strings
 // slice template strings split replace includes
 
-var a = 12;
-let b = 14;
+// var a = 12;
+// let b = 14;
 
 // truthy and falsy values
 // 0 null "" false undefined NaN document.all -> false
@@ -24,14 +24,73 @@ let b = 14;
 
 // Rock paper scissor logic
 
-function rps(user, computer) {
-  if (user === computer) return "draw";
+// function rps(user, computer) {
+//   if (user === computer) return "draw";
 
-  if (user === "rock" && computer === "scissor") return "user";
-  if (user === "paper" && computer === "rock") return "user";
-  if (user === "scissor" && computer === "paper") return "user";
+//   if (user === "rock" && computer === "scissor") return "user";
+//   if (user === "paper" && computer === "rock") return "user";
+//   if (user === "scissor" && computer === "paper") return "user";
 
-  return "computer";
-}
+//   return "computer";
+// }
 
-console.log(rps("rock", "rock"));
+// console.log(rps("rock", "rock"));
+
+// Loops
+
+// kaha se jana hai -> kaha tak jana hai -> kaise jana hai
+// for
+
+// for (start; end; change) {}
+
+// for (let i = 0; i <= 100; i++) {
+//   console.log(i);
+// }
+
+// kaha se jana hai -> kab rukna hai -> kaise jana hai
+// while
+
+//start
+// while (end) {
+// code
+// change
+// }
+
+// let i = 1;
+// while (i < 33) {
+//   console.log(i);
+//   i++;
+// }
+
+// do while
+// do ek baar zaroor chalega
+
+//start
+// do {
+// code
+// change
+// }
+// while (end)
+
+// let i = 1;
+// do {
+//   console.log(i);
+//   i++;
+// }
+// while (i <= 30);
+
+// break and continue
+
+// for (let i = 0; i < 51; i++) {
+//   if (i === 40) {
+//     break;
+//   }
+//   console.log(i);
+// }
+// for (let i = 0; i < 51; i++) {
+//   if (i === 40) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
