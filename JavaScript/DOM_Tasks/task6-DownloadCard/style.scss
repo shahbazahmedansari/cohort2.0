@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(0deg, darkblue, black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Courier New', Courier, monospace;
+
+	.card {
+		width: 600px;
+		height: 300px;
+		background-color: antiquewhite;
+		border-radius: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 3rem;
+		padding: 2rem;
+
+		.card-title {
+			font-size: 1rem;
+			margin-top: -8rem;
+
+			span {
+				color: blue;
+				font-weight: 900;
+				text-decoration: underline;
+			}
+		}
+
+		.outer {
+			width: 100%;
+			background-color: #777;
+			height: 10px;
+			margin-top: 2.5rem;
+			border-radius: 50px;
+
+			.inner {
+				width: 0%;
+				height: 10px;
+				background-color: green;
+				border-radius: 50px;
+			}
+
+			.content {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 3rem;
+
+				#percent {
+					font-size: 4rem;
+				}
+
+				#downloadBtn {
+					font-size: 1.2rem;
+					padding: 1rem 2rem;
+					border: none;
+					border-radius: 1rem;
+					background-color: green;
+					color: #fff;
+					font-weight: 900;
+				}
+
+				#downloadBtn:hover {
+					cursor: pointer;
+				}
+
+				#downloadBtn:active {
+					scale: 0.95;
+				}
+			}
+		}
+	}
+}
