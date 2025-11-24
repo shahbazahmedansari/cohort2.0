@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	cursor: none;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-color: #17022b;
+}
+
+img {
+	rotate: 180deg;
+	position: fixed;
+	transform: translate(50%, 50%);
+}
