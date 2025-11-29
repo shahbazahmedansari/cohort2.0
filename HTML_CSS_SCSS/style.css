@@ -522,22 +522,29 @@ section {
 	border-radius: 10px;
 } */
 
+@property --bgColor {
+	syntax: '<color>';
+	initial-value: rgb(255, 0, 255);
+	inherits: false;
+}
+
 @keyframes changeBgColor {
 	from {
 		background-color: #fff;
 		border-radius: 0px;
-		scale: 1;
+		transform: translateX(0px) scale(1);
 	}
 
 	to {
 		background-color: red;
 		border-radius: 50px;
-		scale: 0.5;
+		transform: translateX(100px) scale(0.5);
 	}
 }
 
 .box {
 	width: 500px;
 	height: 300px;
+	background-color: var(--bgColor);
 	animation: changeBgColor 5s infinite forwards alternate;
 }
