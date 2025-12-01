@@ -100,6 +100,3 @@
 // Pure Functions -> A function which does not changes its I/O value;
 // Impure Functions -> A function which changes its I/O value;
 // Closures -> A function that returns another function and the function which is returned can use the variables that are declared in the parent function.
-
-
-

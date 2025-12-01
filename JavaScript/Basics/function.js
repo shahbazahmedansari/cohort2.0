@@ -316,3 +316,71 @@ let user = {
 };
 
 console.log(user?.address?.city);
+
+const squareNumbers = (arr) => {
+  const newArr = arr.map(val => val * val);
+  return newArr;
+};
+
+console.log(squareNumbers([1, 2, 3, 4]));
+
+const filterEvenNumbers = (arr) => {
+  const newArr = arr.filter(val => val % 2 === 0);
+  return newArr;
+};
+
+console.log(filterEvenNumbers([12, 23, 45, 56]));
+
+const sumPositiveNumbers = (arr) => {
+  const sum = arr.filter(val => val > 0).reduce((acc, val) => acc + val, 0);
+  return sum;
+};
+
+console.log(sumPositiveNumbers([12, -12, 23, -23, 45, -45]));
+
+const getNames = (arr) => {
+  const names = arr.map(val => val.name);
+  return names;
+};
+
+console.log(getNames([
+  {
+    name: "John",
+    age: 20,
+  },
+  {
+    name: "Max",
+    age: 23,
+  },
+  {
+    name: "Jason",
+    age: 25,
+  }
+]));
+
+const findLongestWord = (arr) => {
+  const longestWord = arr.reduce((longest, current) => current.length > longest.length ? current : longest, "");
+  return longestWord;
+};
+
+console.log(findLongestWord(["Aquaman", "Batman", "Superman", "Flash", "Cyborg"]));
+
+const person2 = {
+  name: "Hitesh",
+  age: 19.5,
+  introduce: function () {
+    return `Hi, my name is ${this.name} and I am ${this.age} years old`;
+  }
+};
+
+console.log(person2.introduce());
+
+function outer() {
+  function inner() {
+    return "Inner function called";
+  };
+
+  return inner();
+}
+
+console.log(outer());

@@ -231,3 +231,36 @@ while (withdrawalCount !== 3 && balance > 0) {
 if (flag === true) console.error("Insufficient balance");
 
 console.log(`Balance: ${balance}`);
+
+
+function sumOfN(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(sumOfN(45));
+
+function printMultiplicationTable(n) {
+  let table = [];
+  for (let i = 1; i <= 10; i++) {
+    table.push(`${n} x ${i} = ${n * i}`);
+  }
+  return table;
+}
+
+console.log(printMultiplicationTable(2));
+
+function countVowels(str) {
+  let count = 0;
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u" || str[i] === "A" || str[i] === "E" || str[i] === "I" || str[i] === "O" || str[i] === "U") {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countVowels("Heeeello how Are you"));
