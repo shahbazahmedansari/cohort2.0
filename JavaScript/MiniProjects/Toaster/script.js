@@ -1,11 +1,11 @@
 function createToaster(config) {
-  return function (str) {
+  return function (notification) {
     let div = document.createElement("div");
-    div.textContent = str;
-    div.className = `inline-block ${config.theme === "dark" ? "text-white bg-gray-800" : "text-black bg-gray-100"} px-6 py-4 rounded-md pointer-events-none shadow-md`;
+    div.textContent = notification;
+    div.className = `inline-block ${config.theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"} px-6 py-4 rounded-md shadow-md pointer-events-none inline-block`;
 
     if (config.positionX !== "left" || config.positionY !== "top") {
-      document.querySelector(".parent").className += ` ${config.positionX === "right" ? " right-5" : " left-5"} ${config.positionY === "bottom" ? " bottom-5" : " top-5"}`;
+      document.querySelector(".parent").className += ` ${config.positionX === "right" ? "right-5" : "left-5"} ${config.positionY === "bottom" ? "bottom-5" : "top-5"}`;
     }
 
     document.querySelector(".parent").appendChild(div);
@@ -17,7 +17,7 @@ function createToaster(config) {
 }
 
 let toaster = createToaster({
-  positionX: "right",
+  positionX: "left",
   positionY: "bottom",
   duration: 3,
   theme: "dark",
