@@ -107,6 +107,7 @@ getUser("shahbaz", function (user) {
 // EXRECISE-3:
 
 function loginUser(callback) {
+  console.log("Logging in user...");
   setTimeout(() => {
     const user = {
       id: 1,
@@ -118,18 +119,16 @@ function loginUser(callback) {
 }
 
 function fetchPermissions(userId, callback) {
+  console.log("Fetching permissions...");
   setTimeout(() => {
-    const permissions = [
-      "Permission 1",
-      "Permission 2",
-      "Permission 3",
-    ];
+    const permissions = ["read", "write", "delete"];
 
     callback(permissions);
   }, 1000);
 }
 
 function loadDashboard(permissions, callback) {
+  console.log("Loading Dashboard...");
   setTimeout(() => {
     callback();
   }, 1000);
