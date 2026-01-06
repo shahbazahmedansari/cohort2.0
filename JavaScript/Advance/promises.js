@@ -9,7 +9,7 @@ function createPromise() {
   return prm;
 }
 
-createPromise().then(() => console.log("Promise resolved")).catch(() => console.error("Promise Rejected"));
+// createPromise().then(() => console.log("Promise resolved")).catch(() => console.error("Promise Rejected"));
 
 // async await
 
@@ -19,7 +19,7 @@ async function getRandomUser() {
   console.log(data);
 }
 
-getRandomUser();
+// getRandomUser();
 
 function getRandomNumber() {
   return new Promise((resolve, reject) => {
@@ -37,20 +37,68 @@ async function getNum() {
   console.log(val);
 }
 
-getNum();
+// getNum();
 
 // Scenario 1 — Weather Dashboard with Error Handling
-// let apikey = `4708e7920b65e92acd9408f81f5ec0f9`;
-// `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
 
+async function getWeather(city) {
+  try {
+    let apikey = `4708e7920b65e92acd9408f81f5ec0f9`;
+
+    let rawData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
+
+    if (!rawData.ok) {
+      throw new Error("City not found or Something went wrong");
+    }
+
+    let data = await rawData.json();
+
+    if (data.main.temp < 0) {
+      console.warn(`Too cold out here... ${data.main.temp}°C`);
+    } else if (data.main.temp > 32) {
+      console.warn(`Too hot out there... ${data.main.temp}°C`);
+    } else {
+      console.log(`${data.main.temp}°C`);
+    }
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+// getWeather("New York");
 
 // Scenario 2 — Bulk Email Sending Simulation with Parallel Promises and Error Handling
 
-// const usserEmailList = [
-//   "tyson@gmail.com",
-//   "kai@gmail.com",
-//   "max@gmail.com",
-//   "ray@gmail.com",
-//   "daichi@gmail.com",
-// ];
+const userEmailList = [
+  "tyson@gmail.com",
+  "kai@gmail.com",
+  "max@gmail.com",
+  "ray@gmail.com",
+  "daichi@gmail.com",
+];
+
+function sendEmail(email) {
+  return new Promise((resolve, reject) => {
+    let time = Math.floor(Math.random() * 5);
+
+    setTimeout(() => {
+      let probability = Math.floor(Math.random() * 10);
+
+      if (probability < 5) reject();
+      else resolve();
+    }, time * 1000);
+  });
+}
+
+function sendEmails(userList) {
+  userList.map((email) => {
+    sendEmail(email)
+      .then(() => console.log("Email sent successfully"))
+      .catch((err) => console.warn("Email not sent"));
+  });
+}
+
+sendEmails(userEmailList);
+
+
 
