@@ -13,6 +13,8 @@ body {
 :root {
   /* Background Colors */
   --bg-primary-color: #0c0c0c;
+  --bg-fill-color: #fdfdfc;
+  --bg-fool-color: #ff3b3b;
   /* Text Colors */
   --text-primary-color: #f0f0f0;
   /* Spacing Variables */
@@ -47,6 +49,18 @@ section {
   height: 100%;
 }
 
+.btn {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 section {
   padding: var(--space-2xl);
   display: flex;
@@ -76,4 +90,36 @@ section .infos {
 }
 .board .block {
   border: 1px solid var(--border-primary-color);
+  border-radius: 50%;
+}
+
+.fill {
+  background-color: var(--bg-fill-color);
+}
+
+.food {
+  background-color: var(--bg-fool-color);
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(53, 53, 53, 0.5294117647);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .start-game,
+.modal .game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.modal .game-over {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
