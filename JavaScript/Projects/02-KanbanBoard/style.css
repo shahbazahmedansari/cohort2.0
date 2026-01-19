@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --background-color: #000000;
+  --bg-button-color: #1a1a1a;
+  --bg-task-color: #2a2a2a;
+  --primary-text-color: #f4f4f4;
+  --delete-color: #ff4d4d;
+  /* padding varaibles */
+  --nav-padding: 15px 30px;
+  --section-padding: 15px 30px;
+  --padding-sm: 5px;
+  --padding-md: 10px;
+  --padding-lg: 15px;
+  --padding-xl: 20px;
+  --padding-2xl: 30px;
+  /* border-radius variables */
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 15px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 30px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: var(--nav-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav button {
+  background-color: var(--bg-button-color);
+  border: none;
+  outline: none;
+  color: var(--primary-text-color);
+  padding: var(--padding-md) var(--padding-lg);
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+}
+
+section {
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: var(--padding-2xl);
+}
+section .task-column {
+  background-color: var(--bg-button-color);
+  flex-grow: 1;
+  padding: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  cursor: grab;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+section .task-column .heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-md);
+}
+section .task-column .task {
+  background-color: var(--bg-task-color);
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-sm);
+}
+section .task-column .task button {
+  align-self: flex-end;
+  cursor: pointer;
+  padding: var(--padding-sm) var(--padding-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  background-color: var(--delete-color);
+}
+section .task-column.hover-over {
+  border: 2px dashed var(--primary-text-color);
+  scale: 1.05;
+}
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(61, 61, 61, 0.404);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.modal .center {
+  background-color: var(--bg-button-color);
+  padding: var(--padding-2xl);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-md);
+  z-index: 10;
+}
+.modal .center input,
+.modal .center textarea {
+  background-color: var(--bg-task-color);
+  border: none;
+  outline: none;
+  color: var(--primary-text-color);
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-sm);
+}
+.modal .center button {
+  background-color: var(--bg-task-color);
+  border: none;
+  outline: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  padding: var(--padding-md) var(--padding-lg);
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}/*# sourceMappingURL=style.css.map */
